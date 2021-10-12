@@ -8,6 +8,7 @@ Packages to be installed: <br />
 5. inquirer - https://www.npmjs.com/package/@types/inquirer
 
 To run:<br />
+```
 git clone https://github.com/happymonk-ai/chokidr-bot<br />
 cd chokidr-bot<br />
 cd kafka<br />
@@ -16,3 +17,4 @@ ts-node producer.ts<br />
 ts-node consumer.ts<br />
 // Open another terminal<br />
 ts-node process.ts<br />
+```
