@@ -1,4 +1,4 @@
-# chokidr-bot
+# Chokidr-bot
 
 Packages to be installed: <br />
 1. Kafkajs - https://www.npmjs.com/package/kafkajs<br />
