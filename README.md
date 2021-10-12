@@ -9,12 +9,8 @@ Packages to be installed: <br />
 
 To run:<br />
 ```
-git clone https://github.com/happymonk-ai/chokidr-bot<br />
-cd chokidr-bot<br />
-cd kafka<br />
-ts-node producer.ts<br />
-// Open another terminal<br />
-ts-node consumer.ts<br />
-// Open another terminal<br />
-ts-node process.ts<br />
+git clone https://github.com/happymonk-ai/chokidr-bot
+cd chokidr-bot
+cd kafka
+ts-node producer.ts
 ```
