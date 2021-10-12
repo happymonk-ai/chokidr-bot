@@ -1,0 +1,112 @@
+let Bot = []
+let User = []
+
+function UserResponse(input: string | null){
+    if (input == 'no'){
+        collision_Call()
+    }
+    if (input == 'no, the problem is not resolved yet'){
+        let text18 = 'Okay, donot worry'
+        console.log('Bot:', text18)
+        Bot.push(text18)
+        collision_ProblemConfirmation()
+    }
+    if (input == 'yes'){
+        let text17 = 'Donot worry the authorities will take care of the problem'
+        console.log(text17)
+        Bot.push(text17)
+        collision_ProblemConfirmation()
+    }
+    if (input == 'yes, the problem has been resolved'){
+        let text8 = 'Great! I am glad that the problem has been taken careof!'
+        console.log(text8)
+        Bot.push(text8)
+        collision_End()
+    }
+}
+
+
+function sleep(milliseconds: number) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
+function Collision(){
+    let text1 = 'ALERT! A collision has been detected to a vehicle.'
+    console.log('Bot:', text1)
+    Bot.push(text1)
+    return collision_Location()
+}
+sleep(2000)
+
+function collision_Location(){
+    let text2 = 'The location of the incident is'
+    console.log('Bot:', text2)
+    Bot.push(text2)
+    return collision_Details()
+}
+sleep(2000)
+
+function collision_Details(){
+    let text3 = 'The following are the details fetched about the vehicle:'
+    console.log('Bot:', text3)
+    Bot.push(text3)
+    return collision_Livestatus()
+}
+sleep(2000)
+
+function collision_Livestatus(){
+    let text4 = 'Please view the live status of the incident from your camera.'
+    console.log('Bot:', text4)
+    Bot.push(text4)
+    return collision_EmergencyNum()
+}
+sleep(2000)
+
+function collision_EmergencyNum(){
+    let text5 = 'List of emergency numbers are:'
+    let message = ('For Ambulance dial 108 \n For Police Station dial 100')
+    console.log('Bot:', text5)
+    Bot.push(text5)
+    console.log('Bot:', message)
+    Bot.push(message)
+    return collision_Call()
+}
+sleep(2000)
+
+function collision_Call(){
+    let text6 = 'Do make a call immediately!'
+    let text7 = 'Have you informed the respective authorities regarding the incident?'
+    console.log('Bot:', text6)
+    Bot.push(text6)
+    console.log('Bot:', text7)
+    Bot.push(text7)
+    let input = prompt("Have you informed the respective authorities regarding the incident?")
+    User.push(input)
+    UserResponse(input)
+}
+sleep(2000)
+
+function collision_ProblemConfirmation(){
+    let text9 = 'Can you please confirm that the problem has been taken care of?'
+    console.log(text9)
+    Bot.push(text9)
+    let input = prompt("Can you please confirm that the problem has been taken care of?")
+    User.push(input)
+    UserResponse(input)
+}
+sleep(2000)
+
+function collision_End(){
+    let text10 = 'Can we close our chat?'
+    let text11 = 'Great! Thank you and be safe! Have a good day!'
+    console.log(text10)
+    Bot.push(text10)
+    console.log(text11)
+    Bot.push(text11)
+}
+
+Collision()
