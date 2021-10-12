@@ -1,6 +1,6 @@
 # Chokidr-bot
 
-Packages to be installed: <br />
+## Packages to be installed: <br />
 1. Kafkajs - https://www.npmjs.com/package/kafkajs<br />
 2. Rocksdb - https://www.npmjs.com/package/level-rocksdb<br />
 3. jsipfs - https://github.com/ipfs/js-ipfs<br />
